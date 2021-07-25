@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Anas Khan",
+        "email": "anas985822@gmailx.com",
+        "password": "test1234",
+        "passwordConfirm": "test1234",
+        "location": {
+            "cordinates": "24.95495015643831, 67.15019245126594",
+            "locality": "Gulshan",
+            "city": "karachi"
+        },
+        "averageRating": 3,
+        "description": "A good seller of book"
+
+    }
+]
