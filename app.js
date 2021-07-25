@@ -63,6 +63,20 @@ app.get('/api/v1/photo/:imgFolder/:imgName', (req, res, next) => {
     res.sendFile(`/photo/${req.params.imgFolder}/${req.params.imgName}`, {root: "."})
 })
 
+if ( process.env.NODE_ENV == "production"){
+    app.use(express.static("bookify-client/build"));
+
+    const path = require("path");
+
+    app.get("*", (req, res) => {
+
+        res.sendFile(path.resolve(__dirname, 'bookify-client', 'build', 'index.html'));
+
+    })
+
+
+}
+
 app.use('*', (req, res, next) => {
     next(new AppError("PAGE NOT FOUND", 400))
 })
