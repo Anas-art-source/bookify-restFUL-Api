@@ -7,7 +7,7 @@
     "start": "node server.js",
     "debug": "ndb node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --arch=arm64 --platform=linuxmusl sharp --prefix bookify-client npm install --prefix bookify-client && run build --prefix bookify-client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --arch=arm64 --platform=linuxmusl sharp --prefix bookify-client npm install --prefix bookify-client && npm run build --prefix bookify-client"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +23,6 @@
     "express-rate-limit": "^5.2.6",
     "helmet": "^4.6.0",
     "hpp": "^0.2.3",
-    "sharp": "0.28.3",
     "http": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
