@@ -7,7 +7,7 @@
     "start": "node server.js",
     "debug": "ndb node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix bookify-client && npm run build --prefix bookify-client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --arch=arm64 --platform=linuxmusl sharp --prefix bookify-client && npm install --prefix bookify-client && npm run build --prefix bookify-client"
   },
   "author": "",
   "license": "ISC",
